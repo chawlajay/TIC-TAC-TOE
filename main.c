@@ -7,7 +7,7 @@ void add(int count,int i,int j,char a[10],char b[10])
     b[count]=j;
 }
 
-int check(int count,int i,int j,char a[10],char b[10])
+int check(int count,int i,int j,char a[10],char b[10])     //check function to check whether space is used or not
 {
     int x;
     for(x=0;x<count;x++)
