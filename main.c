@@ -21,7 +21,7 @@ int check(int count,int i,int j,char a[10],char b[10])     //check function to c
     return 0;
 }
 
-int win(char t[3][3])
+int win(char t[3][3])      // win function have the conditions when a player can win
 {
    if(t[0][0]==t[1][0] && t[0][0]==t[2][0] && t[0][0]!='-')
       return 1;
