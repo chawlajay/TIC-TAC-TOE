@@ -48,115 +48,111 @@ int win(char t[3][3])
 
 int main()
 {
-    int i,j,count=0,x;
-    char p1,p2;
-    char t[3][3],a[10],b[10];
-    printf("start the game \n");
-    printf("Player 1 choose $ or #\n");
-    scanf("%c",&p1);
+   int i,j,count=0,x;
+   char p1,p2;
+   char t[3][3],a[10],b[10];
+   printf("start the game \n");
+   printf("Player 1 choose $ or #\n");
+   scanf("%c",&p1);
 
     if(p1=='$')
-        p2='#';
+      p2='#';
     else
-        p2='$';
+      p2='$';
 
-    for(i=0;i<3;i++)
+   for(i=0;i<3;i++)
      {
-        for(j=0;j<3;j++)
+         for(j=0;j<3;j++)
          {
             t[i][j]='-';
             printf("%c\t",t[i][j]);
          }
-        printf("\n");
+      printf("\n");
      }
 
-again :
-
 again1 :
-        printf("Player 1 chance\n");
-        printf("Enter row(1,2,3) , column(1,2,3) \n");
-        scanf("%d%d",&i,&j);
+      
+      printf("Player 1 chance\n");
+      printf("Enter row(1,2,3) , column(1,2,3) \n");
+      scanf("%d%d",&i,&j);
 
-       if(check(count,i,j,a,b))
-          goto again1;
-       else
-        {
-            add(count,i,j,a,b);
-            t[i-1][j-1]=p1;
-            count++;
-
-
-        }
+      if(i>3 || j>3 || i<1 || j<1)
+         goto again1;
+      if(check(count,i,j,a,b))
+         goto again1;
+      else
+      {
+         add(count,i,j,a,b);
+         t[i-1][j-1]=p1;
+         count++;
+      }
 
       for(i=0;i<3;i++)
-       {
-            for(j=0;j<3;j++)
-           {
-             printf("%c\t",t[i][j]);
-           }
-             printf("\n");
-       }
+      {
+         for(j=0;j<3;j++)
+         {
+         printf("%c\t",t[i][j]);
+         }
+         printf("\n");
+      }
 
-       x=win(t);
-       if(x==1)
-        {
-           printf("Player 1 Won the game\n");
-           goto end;
-        }
-       else if(count==9)
-        {
-            printf("Game is over, Nobody wins the game\n");
-            goto end;
-        }
-
-
+      x=win(t);
+      if(x==1)
+      {
+        printf("Player 1 Won the game\n");
+        goto end;
+      }
+      else if(count==9)
+      {
+         printf("Game is over, Nobody wins the game\n");
+         goto end;
+      }
 
 again2 :
-    printf("Player 2 's chance\n");
-    printf("Enter row(1,2,3) , column(1,2,3) \n");
-    scanf("%d%d",&i,&j);
 
-    if(check(count,i,j,a,b)==1)
-          goto again2;
-    else
+   printf("Player 2 's chance\n");
+   printf("Enter row(1,2,3) , column(1,2,3) \n");
+   scanf("%d%d",&i,&j);
+
+   if(check(count,i,j,a,b)==1)
+      goto again2;
+   else
       {
          add(count,i,j,a,b);
          t[i-1][j-1]=p2;
          count++;
       }
 
-    for(i=0;i<3;i++)
-       {
-          for(j=0;j<3;j++)
-           {
+   for(i=0;i<3;i++)
+      {
+         for(j=0;j<3;j++)
+         {
             printf("%c\t",t[i][j]);
-           }
+         }
             printf("\n");
-       }
+      }
 
-       x=win(t);
-       if(x==1)
-        {
-           printf("Player 2 Won the game\n");
-           goto end;
-        }
+      x=win(t);
+      if(x==1)
+      {
+         printf("Player 2 Won the game\n");
+         goto end;
+      }
 
-    goto again;
+   goto again1;
 
-end :
-
-
+end:
 
    printf("Game is over and results are already declared.\n");
    for(i=0;i<3;i++)
-       {
+      {
          for(j=0;j<3;j++)
-        {
-          printf("%c\t",t[i][j]);
-        }
-          printf("\n");
-       }
+         {
+         printf("%c\t",t[i][j]);
+         }
+         printf("\n");
+      }
 
-    return 0;
+   return 0;
 }
 
