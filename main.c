@@ -78,7 +78,7 @@ again1 :
 
       if(i>3 || j>3 || i<1 || j<1)
          goto again1;
-      if(check(count,i,j,a,b))
+      else if(check(count,i,j,a,b))
          goto again1;
       else
       {
@@ -114,7 +114,9 @@ again2 :
    printf("Enter row(1,2,3) , column(1,2,3) \n");
    scanf("%d%d",&i,&j);
 
-   if(check(count,i,j,a,b)==1)
+   if(i>3 || j>3 || i<1 || j<1)
+      goto again2;
+   else if(check(count,i,j,a,b)==1)
       goto again2;
    else
       {
