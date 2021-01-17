@@ -52,13 +52,13 @@ int main()
    char p1,p2;
    char t[3][3],a[10],b[10];
    printf("start the game \n");
-   printf("Player 1 choose $ or #\n");
+   printf("Player 1 choose O or X\n");
    scanf("%c",&p1);
 
-    if(p1=='$')
-      p2='#';
+    if(p1=='O')
+      p2='X';
     else
-      p2='$';
+      p2='O';
 
    for(i=0;i<3;i++)
      {
@@ -77,7 +77,10 @@ again1 :
       scanf("%d%d",&i,&j);
 
       if(i>3 || j>3 || i<1 || j<1)
+      {
+         printf("Please enter row and column value between 1 and 3 only (both inclusive).");
          goto again1;
+      }
       else if(check(count,i,j,a,b))
          goto again1;
       else
@@ -99,7 +102,7 @@ again1 :
       x=win(t);
       if(x==1)
       {
-        printf("Player 1 Won the game\n");
+        printf("\n\n*********************Player 1 Wins the game*********************\n\n");
         goto end;
       }
       else if(count==9)
@@ -115,7 +118,10 @@ again2 :
    scanf("%d%d",&i,&j);
 
    if(i>3 || j>3 || i<1 || j<1)
+   {
+      printf("Please enter row and column value between 1 and 3 only (both inclusive).");
       goto again2;
+   }
    else if(check(count,i,j,a,b)==1)
       goto again2;
    else
@@ -131,13 +137,13 @@ again2 :
          {
             printf("%c\t",t[i][j]);
          }
-            printf("\n");
+         printf("\n");
       }
 
       x=win(t);
       if(x==1)
       {
-         printf("Player 2 Won the game\n");
+         printf("\n\n*********************Player 2 Wins the game*********************\n\n");
          goto end;
       }
 
@@ -145,12 +151,12 @@ again2 :
 
 end:
 
-   printf("Game is over and results are already declared.\n");
+   printf("Game Over\n");
    for(i=0;i<3;i++)
       {
          for(j=0;j<3;j++)
          {
-         printf("%c\t",t[i][j]);
+            printf("%c\t",t[i][j]);
          }
          printf("\n");
       }
