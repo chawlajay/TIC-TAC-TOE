@@ -38,7 +38,7 @@ header{
 width: 305px;
 height: 2px;
 background: lightblue;
-animation: expand 4s ease-in-out;
+animation: expand 3s ease-out;
 animation-iteration-count: infinite;
 }
 
@@ -48,17 +48,72 @@ animation-iteration-count: infinite;
     background: lightblue;
 }
 
+.matrix div:nth-child(2) , .matrix div:nth-child(4){
+animation-name: vertical_up;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+
+.matrix div:nth-child(8) , .matrix div:nth-child(10){
+    animation-name: vertical_middle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.matrix div:nth-child(14) , .matrix div:nth-child(16){
+    animation-name: vertical_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
 @keyframes expand {
     0% {
-        transform: scaleX(0);
+        transform: scaleX(0.05);
     }
     50% {
         transform: scaleX(1);
     }
     100% {
-        transform: scaleX(0);  
+        transform: scaleX(0.05);  
     }
   }
+
+@keyframes vertical_up{
+    0% {
+        transform: translate3d(0,100%, 0) scaleY(0)
+	}
+	50% {
+		transform: translate3d(0,0, 0) scaleY(1)
+	}
+	100% {
+        transform: translate3d(0,100%, 0) scaleY(0) 
+	}
+}
+
+@keyframes vertical_middle{
+    0% {
+        transform: scaleY(0.2);
+    }
+    50% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(0.2);  
+    }
+}
+
+@keyframes vertical_down{
+    0% {
+        transform: translate3d(0,-100%, 0) scaleY(0)
+	}
+	50% {
+		transform: translate3d(0,0, 0) scaleY(1)
+	}
+	100% {
+        transform: translate3d(0,-100%, 0) scaleY(0) 
+	}
+}
 
 .status{
     background-color:grey;
