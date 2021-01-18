@@ -15,8 +15,7 @@ header{
 
 .container{
     display: flex;
-    /* height: 100vh; */
-    margin: 10%;
+    margin: 5%;
     align-items: center;
     justify-content: center;
 }
@@ -28,12 +27,25 @@ header{
     align-self: center;
 }
 
-.matrix div{
+.matrix .cell{
     height: 100px;
     width: 100px;
     background-color: black;
-    border: 1px dotted white;
 }
+
+.matrix .hLine{
+width: 305px;
+height: 2px;
+background: lightblue;
+
+}
+
+.matrix .vLine{
+    height:100px;
+    width:2px;
+    background: lightblue;
+}
+
 
 .status{
     background-color:grey;
