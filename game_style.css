@@ -7,9 +7,16 @@ body{
     padding: 0;
     background-color: rgba(20,20,20,0.8);
 }
+
+header{
+    text-align: center;
+    color:khaki;
+}
+
 .container{
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
+    margin: 10%;
     align-items: center;
     justify-content: center;
 }
