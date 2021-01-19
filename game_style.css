@@ -13,6 +13,14 @@ header{
     color:khaki;
 }
 
+.neon_heading{
+        font-size: 24px;
+        text-align: center;
+        line-height: 1;
+        color: #95f38c;
+        animation: neon .1s ease-in-out infinite alternate;
+}
+
 .glow {
     color: #fff;
     text-align: center;
@@ -21,13 +29,6 @@ header{
     animation: glow 1s ease-in-out infinite alternate;
   }
 
-.neon_heading{
-        font-size: 1.6rem;
-        text-align: center;
-        line-height: 1;
-        color: #95f38c;
-        animation: neon .1s ease-in-out infinite alternate;
-}  
 .container{
     display: flex;
     margin: 5%;
@@ -87,11 +88,16 @@ animation-iteration-count: infinite;
 .status{
     background-color:grey;
     padding: 0 5px;
-    margin-left:10%;
     border-radius: 5px;
+    margin:0 30px;
     width:150px;
     font-size: 20px;
     text-align: center;
+}
+
+#restart{
+    font-size: 20px;
+    cursor: pointer;
 }
 
 @keyframes expand {
