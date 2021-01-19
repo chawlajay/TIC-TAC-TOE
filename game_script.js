@@ -16,7 +16,7 @@ function display_message(mes){
 }
 
 function disable_clicks(){
-    matrix.disabled=true;
+    matrix.style.pointerEvents="none";
 }
 
 function restart_the_game(){
@@ -29,6 +29,7 @@ function restart_the_game(){
         squares[i].innerHTML="";
     }
     count=0;
+    matrix.style.pointerEvents="auto";
     display_message("Player 1 starts with the 'O' symbol");
 }
 
@@ -94,17 +95,18 @@ function check_winner(){
 
     if(win==1)
     {
-        display_message("Player 1 WON the game ! *Congratulations*");
+        display_message("Player 1️⃣,😎 WON the game ! Congratulations🎉🎊");
+        matrix.removeEventListener('click',add_symbol,true);
         disable_clicks();
     }
     else if(win==2)
     {
-        display_message("Player 2 WON the game ! *Congratulations*");
+        display_message("Player 2️⃣,🤩 WON the game ! Congratulations✨🎉");
         disable_clicks();
     }
     else if(count==9)
     {
-        display_message("GAME OVER ! No one wins😅 RESTART to play again.");
+        display_message("GAME OVER ! Match Draw😅✌ RESTART to play again.");
     }
 }
 
