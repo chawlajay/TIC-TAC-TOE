@@ -21,6 +21,13 @@ header{
     animation: glow 1s ease-in-out infinite alternate;
   }
 
+.neon_heading{
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1;
+        color: #95f38c;
+        animation: neon .1s ease-in-out infinite alternate;
+}  
 .container{
     display: flex;
     margin: 5%;
@@ -42,7 +49,7 @@ header{
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 90px;
+    font-size: 84px;
 }
 
 .matrix .hLine{
@@ -141,6 +148,27 @@ animation-iteration-count: infinite;
     }
     
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      text-shadow: 0 0 15px #fff, 0 0 25px #ff4da6, 0 0 35px #ff4da6, 0 0 45px #ff4da6, 0 0 55px #ff4da6, 0 0 65px #ff4da6, 0 0 75px #ff4da6;
     }
   }
+
+@keyframes neon {
+    from {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.92),
+      0 0 30px rgba(202,228,225,0.34),
+      0 0 12px rgba(30,132,242,0.52),
+      0 0 21px rgba(30,132,242,0.92),
+      0 0 34px rgba(30,132,242,0.78),
+      0 0 54px rgba(30,132,242,0.92);
+    }
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(30,132,242,0.58),
+      0 0 22px rgba(30,132,242,0.84),
+      0 0 38px rgba(30,132,242,0.88),
+      0 0 60px rgba(30,132,242,1);
+    }
+  }  
