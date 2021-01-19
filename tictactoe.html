@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play TIC-TAC-TOE</title>
     <link rel="stylesheet" href="game_style.css">
-    <script src="game_script.js"></script>
 </head>
 <body>
     <header class="glow">
@@ -14,28 +13,29 @@
     </header>
     <div class="container">
         <div class="matrix">
-            <div class="cell cell_0"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_1"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_2"></div>
-            <div class="hLine"></div>
-            <div class="cell cell_3"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_4"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_5"></div>
-            <div class="hLine"></div>
-            <div class="cell cell_6"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_7"></div>
-            <div class="vLine"></div>
-            <div class="cell cell_8"></div>
+            <div class="cell cell_0" id="0"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_1" id="1"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_2" id="2"></div>
+                <div class="hLine"></div>
+            <div class="cell cell_3" id="3"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_4" id="4"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_5" id="5"></div>
+                <div class="hLine"></div>
+            <div class="cell cell_6" id="6"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_7" id="7"></div>
+                <div class="vLine"></div>
+            <div class="cell cell_8" id="8"></div>
         </div>
 
         <div class="status">
             <p id="message">This is a system generated message</p>
         </div>
     </div>
+    <script src="game_script.js"></script>
 </body>
 </html>
