@@ -6,7 +6,7 @@ let squares=Array.from(document.querySelectorAll('.cell'));
 
 const message=document.getElementById("message");
 
-message.innerHTML="Player 1's Move";
+message.innerHTML="Player 1 starts with the 'O' symbol";
 matrix.style.cursor='pointer';
 
 const GLOWTEXT="glow";
@@ -29,7 +29,7 @@ function restart_the_game(){
         squares[i].innerHTML="";
     }
     count=0;
-    display_message("Player 1's Move");
+    display_message("Player 1 starts with the 'O' symbol");
 }
 
 function check_winner(){
@@ -102,6 +102,10 @@ function check_winner(){
         display_message("Player 2 WON the game ! *Congratulations*");
         disable_clicks();
     }
+    else if(count==9)
+    {
+        display_message("GAME OVER ! No one wins😅 RESTART to play again.");
+    }
 }
 
 function add_symbol(clicked_cell_element){
@@ -123,8 +127,8 @@ function add_symbol(clicked_cell_element){
                 display_message("Player 2's Move");
             }
             clicked_cell_element.classList.toggle(GLOWTEXT);
-            check_winner();
             count++;
+            check_winner();
         }
     }
 }

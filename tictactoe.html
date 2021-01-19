@@ -9,7 +9,7 @@
 <body>
     <header class="neon_heading">
         <h1>TIC-TAC-TOE</h1>
-        <h2>Player 1 gets the 'O' symbol to play with.</h2>    
+        <h2 id="message"></h2>    
     </header>
     <div class="container">
         <div class="matrix">
@@ -32,9 +32,6 @@
             <div class="cell cell_8" id="8"></div>
         </div>
 
-        <div class="status">
-            <p id="message">This is a system generated message</p>
-        </div>
         <button id="restart" onclick=restart_the_game()>Restart GAME</button>
     </div>
     <script src="game_script.js"></script>

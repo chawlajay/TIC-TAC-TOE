@@ -98,6 +98,7 @@ animation-iteration-count: infinite;
 #restart{
     font-size: 20px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 @keyframes expand {
