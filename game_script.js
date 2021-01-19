@@ -14,6 +14,10 @@ function display_message(mes){
     message.innerHTML=mes;
 }
 
+function disable_clicks(){
+    matrix.style.pointerEvents='none';
+}
+
 function check_winner(){
     let win=0;
     //check horizontal cells
@@ -23,11 +27,11 @@ function check_winner(){
         {
             if(squares[i].innerHTML=='O')
             {
-                display_message("Player 1 WON the game ! *Congratulations*");
+                win=1;
             }
             else if(squares[i].innerHTML=='X')
             {
-                display_message("Player 2 WON the game ! *Congratulations*");
+                win=2;
             }
         }
     }
@@ -39,11 +43,11 @@ function check_winner(){
         {
             if(squares[i].innerHTML=='O')
             {
-                display_message("Player 1 WON the game ! *Congratulations*");
+                win=1;
             }
             else if(squares[i].innerHTML=='X')
             {
-                display_message("Player 2 WON the game ! *Congratulations*");
+                win=2;
             }
         }
     }
@@ -53,11 +57,11 @@ function check_winner(){
     {
         if(squares[0].innerHTML=='O')
             {
-                display_message("Player 1 WON the game ! *Congratulations*");
+                win=1;
             }
             else if(squares[0].innerHTML=='X')
             {
-                display_message("Player 2 WON the game ! *Congratulations*");
+                win=2;
             }
     }
 
@@ -66,12 +70,23 @@ function check_winner(){
     {
         if(squares[2].innerHTML=='O')
             {
-                display_message("Player 1 WON the game ! *Congratulations*");
+                win=1;
             }
             else if(squares[2].innerHTML=='X')
             {
-                display_message("Player 2 WON the game ! *Congratulations*");
+                win=2;
             }
+    }
+
+    if(win==1)
+    {
+        display_message("Player 1 WON the game ! *Congratulations*");
+        disable_clicks();
+    }
+    else if(win==2)
+    {
+        display_message("Player 2 WON the game ! *Congratulations*");
+        disable_clicks();
     }
 }
 
