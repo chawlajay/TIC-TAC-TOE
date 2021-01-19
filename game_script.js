@@ -5,3 +5,18 @@ const matrix=document.querySelector(".matrix");
 let squares=Array.from(document.querySelectorAll('.cell'));
 
 const message=document.getElementById("message");
+
+function add_symbol(element){
+    if(count%2)
+    {
+        //player 2 - X
+        element.innerHTML="X";
+        count++;
+    }
+    else
+    {
+        //player 1 - O
+        element.innerHTML="O";
+        count++;
+    }
+}
