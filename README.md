@@ -10,3 +10,7 @@ I have made this using three functions.
 1. tictactoe.html - Double click on this file to play the game.
 2. game_style.css - to add glowing effects,grid,message,etc.
 3. game_script.css - to add onclick events,functions,to decide winner,etc. 
+
+### Have a look at this beautiful game !!
+1. When Game starts, then this is the first look.....
+[GameStart](https://github.com/chawlajay/TIC-TAC-TOE/blob/master/whenGameStarts.png?raw=true)
