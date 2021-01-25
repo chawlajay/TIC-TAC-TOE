@@ -12,7 +12,4 @@ I have made this using three functions.
 3. game_script.css - to add onclick events,functions,to decide winner,etc. 
 
 ### Have a look at this beautiful game !!
-1. When Game starts, then this is the first look.....
-![GameStart](https://github.com/chawlajay/TIC-TAC-TOE/blob/master/whenGameStarts.png?raw=true)
-2. When Player 1 wins the game.....
-![player1Wins](https://github.com/chawlajay/TIC-TAC-TOE/blob/master/Player1_wins.png?raw=true)
+
